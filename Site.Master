@@ -97,7 +97,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" runat="server" href="~/">
-                    <i class="bi bi-car-front-fill me-2 text-primary fs-4"></i>
+                   <%-- <i class="bi bi-car-front-fill me-2 text-primary fs-4"></i>--%>
                     Control Vehículos
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
