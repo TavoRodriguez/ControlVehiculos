@@ -56,8 +56,8 @@ Public Class dbPersona
             Dim sql As String = "UPDATE Personas SET Nombre = @Nombre, Apellido1 = @Apellido1, Apellido2 = @Apellido2, Nacionalidad = @Nacionalidad, FechaNacimiento = @FechaNacimiento, Telefono = @Telefono WHERE IdPersona = @IdPersona"
             Dim parametros As New List(Of SqlParameter) From {
                 New SqlParameter("@Nombre", Persona.Nombre),
-                New SqlParameter("@Apellido", Persona.Apellido1),
-                New SqlParameter("@Edad", Persona.Apellido2),
+                New SqlParameter("@Apellido1", Persona.Apellido1),
+                New SqlParameter("@Apellido2", Persona.Apellido2),
                 New SqlParameter("@Nacionalidad", Persona.Nacionalidad),
                 New SqlParameter("@FechaNacimiento", Persona.FechaNacimiento),
                 New SqlParameter("@Telefono", Persona.Telefono),
