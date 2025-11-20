@@ -1,25 +1,13 @@
 ﻿Public Class Propietario
-    Inherits Persona
     Private _idPropietario As Integer
-    Private _numVehiculos As String
+    Private _idPersona As Integer
 
     Public Sub New()
-        MyBase.New() ' Llama al constructor de la clase Persona
     End Sub
 
-    Public Sub New(idPropietario As Integer, numVehiculos As String, persona As Persona)
-        MyBase.New(persona.IdPersona, persona.Nombre,
-                   persona.Apellido1,
-                   persona.Apellido2,
-                   persona.Nacionalidad,
-                   persona.FechaNacimiento, persona.Telefono)
+    Public Sub New(idPropietario As Integer, idPersona As Integer)
         Me.IdPropietario = idPropietario
-        Me.NumVehiculos = numVehiculos
-    End Sub
-
-    Public Sub New(idPropietario As Integer, numVehiculos As String)
-        Me.IdPropietario = idPropietario
-        Me.NumVehiculos = numVehiculos
+        Me.IdPersona = idPersona
     End Sub
 
     Public Property IdPropietario As Integer
@@ -31,12 +19,13 @@
         End Set
     End Property
 
-    Public Property NumVehiculos As String
+    Public Property IdPersona As Integer
         Get
-            Return _numVehiculos
+            Return _idPersona
         End Get
-        Set(value As String)
-            _numVehiculos = value
+        Set(value As Integer)
+            _idPersona = value
         End Set
     End Property
 End Class
+

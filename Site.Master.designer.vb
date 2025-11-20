@@ -14,6 +14,42 @@ Option Explicit On
 Partial Public Class SiteMaster
 
     '''<summary>
+    '''Control linkLogin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents linkLogin As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''Control linkRegistro.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents linkRegistro As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''Control liAdmin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents liAdmin As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control linkAdmin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents linkAdmin As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
     '''Control linkPersonas.
     '''</summary>
     '''<remarks>
@@ -39,6 +75,15 @@ Partial Public Class SiteMaster
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents linkVehiculos As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''Control btnLogout.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLogout As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control MainContent.

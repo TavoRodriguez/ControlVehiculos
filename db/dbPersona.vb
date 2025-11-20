@@ -16,14 +16,6 @@ Public Class dbPersona
                 New SqlParameter("@Telefono", Persona.Telefono)
             }
             dbHelper.ExecuteNonQuery(sql, parametros)
-            'Using connection As New SqlConnection(connectionString)
-            '    Using command As New SqlCommand(sql, connection)
-            '        command.Parameters.AddRange(parametros.ToArray())
-            '        connection.Open()
-            '        command.ExecuteNonQuery()
-            '    End Using
-
-            'End Using
         Catch ex As Exception
 
         End Try
@@ -38,15 +30,6 @@ Public Class dbPersona
                 New SqlParameter("@IdPersona", idPersona)
             }
             dbHelper.ExecuteNonQuery(sql, parametros)
-
-            'Using connection As New SqlConnection(connectionString)
-            '    Using command As New SqlCommand(sql, connection)
-            '        command.Parameters.AddRange(parametros.ToArray())
-            '        connection.Open()
-            '        command.ExecuteNonQuery()
-            '    End Using
-            'End Using
-
             Return "Persona eliminada correctamente"
         Catch ex As Exception
             Return "Error al eliminar: " & ex.Message
@@ -77,4 +60,18 @@ Public Class dbPersona
             Return "Error al actualizar: " & ex.Message
         End Try
     End Function
+
+    Public Function Consulta() As DataTable
+        Dim resultado As New DataTable()
+        Dim sql As String = "SELECT *, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS NombreCompleto FROM Personas"
+
+        Try
+            resultado = dbHelper.ExecuteQuery(sql, New List(Of SqlParameter)())
+            Return resultado
+
+        Catch ex As Exception
+            Throw New Exception("Error al consultar las personas.", ex)
+        End Try
+    End Function
+
 End Class
